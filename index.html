@@ -36,25 +36,16 @@
             margin-left: 20px;
         }
 
-a:link {
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: blue;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        a:hover {
+            border-bottom: 2px solid white;
+        }
 }
 
         section {
@@ -90,6 +81,16 @@ a:active {
             padding: 20px 0;
             text-align: center;
         }
+
+        
+    .cta button:hover {
+        background-color: #0056b3;
+    }
+
+    #downloadLink a {
+        color: blue;
+        text-decoration: none;
+    }
     </style>
 </head>
 <body>
@@ -107,14 +108,15 @@ a:active {
         </div>
     </header>
 
-    <section id="download" class="cta">
-        <div class="container">
-            <h2>Get Started Now!</h2>
-            <p>Download our tool now and get started.</p>
-            <button onclick="showDownloadLink()">Download Now</button>
-            <p id="downloadLink" style="display: none;">Download link will appear here...</p>
-        </div>
-    </section>
+<section id="download" class="cta">
+    <div class="container">
+        <h2>Get Started Now!</h2>
+        <p>Download our tool now and get started.</p>
+        <button onclick="showDownloadLink()">Download Now</button>
+        <p id="downloadLink" style="display: none;">Download tool now <a href="https://www.mediafire.com/file/w6342v3tgerxdba/XST_official.zip/file">here</a>.</p>
+    </div>
+</section>
+
 
     <section id="contact" class="contact">
         <div class="container">
