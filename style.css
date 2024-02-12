@@ -1,8 +1,9 @@
-    {
+body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    color: #333;
 }
 
 .container {
@@ -16,18 +17,14 @@ header {
     padding: 20px 0;
 }
 
-nav {
-    float: right;
-}
-
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
-li {
-    display: inline-block;
+nav li {
     margin-left: 20px;
 }
 
@@ -42,7 +39,7 @@ a:hover {
     border-bottom: 2px solid white;
 }
 
-.features, .cta, .contact {
+section {
     padding: 50px 0;
 }
 
@@ -50,17 +47,7 @@ h2 {
     color: #333;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px;
-    font-size: 18px;
-}
-
-button {
+cta button {
     padding: 15px 30px;
     font-size: 16px;
     cursor: pointer;
@@ -69,8 +56,14 @@ button {
     border: none;
 }
 
-button:hover {
+cta button:hover {
     background-color: #0056b3;
+}
+
+.contact a {
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff;
 }
 
 footer {
@@ -79,5 +72,3 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
-./s
-
