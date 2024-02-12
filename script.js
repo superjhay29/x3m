@@ -3,6 +3,6 @@
             
             if (confirmDownload) {
                 document.getElementById('downloadLink').style.display = 'block';
-                document.getElementById('downloadLink').innerHTML = 'Download tool now <a href="https://www.mediafire.com/file/w6342v3tgerxdba/XST_official.zip/file">here</a>.';
+                document.getElementById('downloadLink').innerHTML = 'Download tool now <a href="https://www.mediafire.com/file/51p2r6sbglowmjl/XST_official.7z/file/file">here</a>.';
             }
         }
