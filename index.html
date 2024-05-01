@@ -2,33 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X3M Service</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <style>
-        /* Common CSS styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .header {
-            background-color: #031129;
-            color: #fff;
-            padding: 10px 20px;
+        /* CSS styles for the added image */
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10px 20px;
+            background-color: #031129;
+            color: #fff;
         }
 
-        .navbar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
+        .red{
+            text-align: center;
         }
 
         .navbar a {
@@ -42,82 +34,33 @@
             color: cyan;
         }
 
-.home {
-    position: relative;
-    text-align: center;
-}
-
-.home-image {
-    position: absolute;
-    top: 0;
-    right: 0; /* Position the image on the right side */
-    z-index: 1;
-    opacity: 0;
-    animation: fadeInRight 2.5s ease forwards;
-}
-
-.home-image img {
-    max-width: 100%;
-}
-
-.home-content {
-    padding: 20px;
-    margin: 0 auto; /* Center the content horizontally */
-    max-width: 600px; /* Limit the width of the content */
-}
-
-
-        .home-content h3,
-        .home-content h1,
-        .home-content h3,
-        .home-content p {
-            color: #fff;
+        .home {
+            position: relative; /* Ensure the section is positioned relative */
         }
 
-        .home-sci {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+        .home-image {
+            position: absolute; /* Position the image absolutely within the relative section */
+            top: 150px; /* Adjust the top position to be below the navbar */
+            right: 20px; /* Position the image to the right */
+            z-index: 1; /* Ensure the image is above other elements */
+            opacity: 0; /* Initially hide the image */
+            animation: fadeInRight 2.5s ease forwards; /* Animation to fade in */
         }
 
-        .home-sci a {
-            color: #0ef;
-            font-size: 24px;
+        .home-image img {
+            max-width: 100%;
         }
 
-        .btn-box {
-            display: inline-block;
-            padding: 12px 28px;
-            background: #0ef;
-            border-radius: 40px;
-            font-size: 16px;
-            color: #081b29;
-            letter-spacing: 1px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s, color 0.3s;
-            margin-top: 20px;
-        }
+        
 
-        .btn-box:hover {
-            background-color: #081b29;
-            color: #0ef;
-        }
-
-        .red {
-            text-align: center;
-            color: #fff;
-            margin: 20px;
-        }
-
-        /* Media queries for mobile responsiveness */
-        @media (max-width: 768px) {
-            .home-image {
-                top: unset;
-                right: unset;
-                max-width: 80%;
-                margin: 20px auto;
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px); /* Initial position to the right */
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0); /* Move to original position */
             }
         }
     </style>
@@ -128,7 +71,7 @@
             <img src="assets/20240308_103528 (1).ico" alt="Logo" style="width: 200px; height:90px;">
         </a>
         <nav class="navbar">
-            <a href="index.html" style="--i:1" class="active">Home</a>
+            <a href="home.html" style="--i:1" class="active">Home</a>
             <a href="services.html" style="--i:3">Services</a>
             <a href="products.html" style="--i:4">Products</a>
             <a href="devs.html" style="--i:5">Developers/Techs</a>
@@ -147,10 +90,10 @@
             <h3><span class="text"></span></h3>
             <p><i class='bx bx-current-location'></i> Proudly From Philippines</p>
             <div class="home-sci">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-telegram'></i></a>
-                <a href="#"><i class='bx bxl-tiktok'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
+                <a href="#" style="--i:8"><i class='bx bxl-telegram'></i></a>
+                <a href="#" style="--i:9"><i class='bx bxl-tiktok'></i></a>
+                <a href="#" style="--i:10"><i class='bx bxl-whatsapp'></i></a>
             </div>
             <a href="#" class="btn-box">More About Us</a>
         </div>
