@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X3M Service - Services</title>
+    <style>
+        /* Inline CSS for the Services page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #18061f url('assets/bg.jpg') no-repeat;
+            background-size: cover;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .header {
+            background-color: #031129;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInDown 1s ease;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: cyan;
+        }
+
+        .services {
+            padding: 50px;
+            animation: slideUp 1s ease;
+            text-align: center;
+        }
+
+        .service {
+            margin-bottom: 50px;
+        }
+
+        .service img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="assets/20240308_103528 (1).ico" alt="Logo" style="width: 200px; height:90px;">
+        </a>
+        <nav class="navbar">
+            <a href="home.html" style="--i:1">Home</a>
+            <a href="#" style="--i:3" class="active">Services</a>
+            <a href="products.html" style="--i:4">Products</a>
+            <a href="devs.html" style="--i:5">Developers/Techs</a>
+        </nav>
+    </header>
+    
+    <section class="services">
+        <div class="service">
+            <h2>Unbricking Phones</h2>
+            <p>We specialize in unbricking phones, restoring them to their original working condition after software or firmware issues.</p>
+        </div>
+        <div class="service">
+            <h2>Rooting Phones</h2>
+            <p>We offer rooting services to unlock the full potential of your device, allowing you to customize and optimize its performance.</p>
+        </div>
+        <div class="service">
+            <h2>Installation of GSI or Custom ROMs</h2>
+            <p>Our experts can install Generic System Images (GSI) or custom ROMs on your device, providing enhanced features and customization options.</p>
+        </div>
+        <div class="service">
+            <h2>Bypassing FRP or MI Account</h2>
+            <p>We provide solutions for bypassing Factory Reset Protection (FRP) or MI Account locks, enabling you to regain access to your device.</p>
+        </div>
+    </section>
+
+    <script>
+        // Any JavaScript specific to the Services page can go here
+    </script>
+</body>
+</html>

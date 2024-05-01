@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X3M Service - Products</title>
+    <style>
+        /* Inline CSS for the Products page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #18061f url('assets/bg.jpg') no-repeat;
+            background-size: cover;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .header {
+            background-color: #031129;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInDown 1s ease;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: cyan;
+        }
+
+        .products {
+            padding: 50px;
+            animation: slideUp 1s ease;
+            text-align: center;
+        }
+
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .product-info img {
+            max-width: 60%;
+            margin-bottom: 20px;
+        }
+
+        .product-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #03A9F4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #0288D1;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="assets/20240308_103528 (1).ico" alt="Logo" style="width: 200px; height:90px;">
+        </a>
+        <nav class="navbar">
+            <a href="home.html" style="--i:1">Home</a>
+            <a href="services.html" style="--i:3">Services</a>
+            <a href="#" class="active" style="--i:4">Products</a>
+            <a href="devs.html" style="--i:5">Developers/Techs</a>
+        </nav>
+    </header>
+    
+    <section class="products">
+        <h1 style="font-size: 36px;">X3M OS</h1>
+        <div class="product-info">
+            <img src="assets/438267739_433197689657339_7392261133327135699_n.jpg" alt="X3M OS">
+            <p>X3M OS is a custom operating system developed by X3M Team. It is designed to provide a seamless user experience with enhanced performance and security features. It comes with a variety of pre-installed applications and customization options.</p>
+            <a href="#" class="download-btn">Download Now</a>
+        </div>
+    </section>
+
+    <section class="products">
+        <h1 style="font-size: 36px;">XST Tool</h1>
+        <div class="product-info">
+            <img src="assets/xst.jpg" alt="XST Tool">
+            <p>XST Tool is an Android servicing tool developed by X3M Team. It provides a wide range of functions for managing and optimizing Android devices, including servicing, managing partitions, provides tools, and more.</p>
+            <a href="#" class="download-btn">Download Now</a>
+        </div>
+    </section>
+
+    <script>
+        // Any JavaScript specific to the Products page can go here
+    </script>
+</body>
+</html>
