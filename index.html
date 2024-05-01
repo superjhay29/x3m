@@ -42,19 +42,30 @@
             color: cyan;
         }
 
-        .home {
-            position: relative;
-            text-align: center;
-        }
+.home {
+    position: relative;
+    text-align: center;
+}
 
-        .home-image img {
-            width: 100%;
-            height: auto;
-        }
+.home-image {
+    position: absolute;
+    top: 0;
+    right: 0; /* Position the image on the right side */
+    z-index: 1;
+    opacity: 0;
+    animation: fadeInRight 2.5s ease forwards;
+}
 
-        .home-content {
-            padding: 20px;
-        }
+.home-image img {
+    max-width: 100%;
+}
+
+.home-content {
+    padding: 20px;
+    margin: 0 auto; /* Center the content horizontally */
+    max-width: 600px; /* Limit the width of the content */
+}
+
 
         .home-content h3,
         .home-content h1,
