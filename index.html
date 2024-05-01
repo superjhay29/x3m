@@ -9,58 +9,90 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <style>
-        /* CSS styles for the added image */
-        .navbar {
+        /* Common styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #031129;
+            color: #fff;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            background-color: #031129;
-            color: #fff;
         }
 
-        .red{
-            text-align: center;
+        .header .logo img {
+            width: 200px;
+            height: 90px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
 
         .navbar a {
             color: #fff;
             text-decoration: none;
             padding: 10px;
-            transition: color 0.3s;
         }
 
         .navbar a:hover {
             color: cyan;
         }
 
+        /* Home section styles */
         .home {
-            position: relative; /* Ensure the section is positioned relative */
+            position: relative;
+            text-align: center;
+            padding: 20px;
         }
 
         .home-image {
-            position: absolute; /* Position the image absolutely within the relative section */
-            top: 150px; /* Adjust the top position to be below the navbar */
-            right: 20px; /* Position the image to the right */
-            z-index: 1; /* Ensure the image is above other elements */
-            opacity: 0; /* Initially hide the image */
-            animation: fadeInRight 2.5s ease forwards; /* Animation to fade in */
-        }
-
-        .home-image img {
             max-width: 100%;
+            margin-bottom: 20px;
         }
 
-        
+        .home-content {
+            position: relative;
+        }
 
+        /* Responsive adjustments */
+        @media only screen and (min-width: 768px) {
+            .home {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .home-image {
+                max-width: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+            }
+
+            .home-content {
+                max-width: 50%;
+                text-align: left;
+            }
+        }
+
+        /* Animation */
         @keyframes fadeInRight {
             from {
                 opacity: 0;
-                transform: translateX(20px); /* Initial position to the right */
+                transform: translateX(20px);
             }
             to {
                 opacity: 1;
-                transform: translateX(0); /* Move to original position */
+                transform: translateX(0);
             }
         }
     </style>
@@ -68,7 +100,7 @@
 <body>
     <header class="header">
         <a href="#" class="logo">
-            <img src="assets/20240308_103528 (1).ico" alt="Logo" style="width: 200px; height:90px;">
+            <img src="assets/20240308_103528 (1).ico" alt="Logo">
         </a>
         <nav class="navbar">
             <a href="home.html" style="--i:1" class="active">Home</a>
@@ -97,7 +129,6 @@
             </div>
             <a href="#" class="btn-box">More About Us</a>
         </div>
-        <span class="hover-img"></span>
     </section>
     
     <section class="about" id="about">
