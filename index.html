@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X3M Service</title>
     <link rel="stylesheet" href="stylesheet.css">
@@ -12,15 +11,11 @@
         /* CSS styles for the added image */
         .navbar {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 10px 20px;
+            padding: 10px;
             background-color: #031129;
             color: #fff;
-        }
-
-        .red{
-            text-align: center;
         }
 
         .navbar a {
@@ -51,8 +46,6 @@
             max-width: 100%;
         }
 
-        
-
         @keyframes fadeInRight {
             from {
                 opacity: 0;
@@ -61,6 +54,19 @@
             to {
                 opacity: 1;
                 transform: translateX(0); /* Move to original position */
+            }
+        }
+
+        /* Mobile navigation styles */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .navbar a {
+                padding: 5px;
             }
         }
     </style>
@@ -79,9 +85,7 @@
     </header>
     
     <section class="home">
-        <div class="home-image">
-            
-        </div>
+        <div class="home-image"></div>
         <div class="home-content">
             <div class="welcome-content">
                 <h3>Welcome to X3M Team</h3>
