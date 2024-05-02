@@ -9,9 +9,15 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <style>
         /* CSS styles for the added image */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
         .navbar {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
             padding: 10px;
             background-color: #031129;
@@ -60,13 +66,12 @@
         /* Mobile navigation styles */
         @media screen and (max-width: 768px) {
             .navbar {
-                flex-direction: row;
-                justify-content: space-around;
+                flex-direction: column;
                 align-items: center;
             }
 
             .navbar a {
-                padding: 5px;
+                padding: 5px 0;
             }
         }
     </style>
