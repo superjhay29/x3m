@@ -13,7 +13,6 @@
             font-family: Arial, sans-serif;
             background: #18061f url('assets/bg.jpg') no-repeat;
             background-size: cover;
-            height: 100vh;
             color: #fff;
         }
 
@@ -24,6 +23,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
             animation: fadeInDown 1s ease;
         }
 
@@ -39,28 +42,34 @@
         }
 
         .services {
-            padding: 20px; /* Adjust padding for smaller screens */
+            padding: 100px 20px 20px; /* Adjust padding to account for fixed header */
             animation: slideUp 1s ease;
             text-align: center;
         }
 
         .service {
-            margin-bottom: 30px; /* Adjust margin for smaller screens */
+            background-color: rgba(3, 169, 244, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
-        .service img {
-            width: 150px; /* Adjust image size for smaller screens */
-            height: 150px; /* Adjust image size for smaller screens */
-            border-radius: 50%;
-            margin-bottom: 10px; /* Adjust margin for smaller screens */
+        .service:hover {
+            transform: translateY(-10px);
+            background-color: rgba(2, 136, 209, 0.8);
         }
 
         .service h2 {
-            font-size: 24px; /* Adjust font size for smaller screens */
+            font-size: 28px;
+            margin-bottom: 15px;
         }
 
         .service p {
-            font-size: 16px; /* Adjust font size for smaller screens */
+            font-size: 18px;
+            margin-bottom: 20px;
         }
 
         @keyframes fadeInDown {
@@ -86,17 +95,12 @@
         }
 
         @media screen and (max-width: 768px) {
-            .service img {
-                width: 100px; /* Adjust image size for smaller screens */
-                height: 100px; /* Adjust image size for smaller screens */
-            }
-
             .service h2 {
-                font-size: 20px; /* Adjust font size for smaller screens */
+                font-size: 24px; /* Adjust font size for smaller screens */
             }
 
             .service p {
-                font-size: 14px; /* Adjust font size for smaller screens */
+                font-size: 16px; /* Adjust font size for smaller screens */
             }
         }
     </style>
