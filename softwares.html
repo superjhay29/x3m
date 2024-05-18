@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X3M Service - Customized OS</title>
+    <style>
+        /* Inline CSS for the Custom OS page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #18061f url('assets/bg.jpg') no-repeat;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .header {
+            background-color: #031129;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            animation: fadeInDown 1s ease;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: cyan;
+        }
+
+        .content {
+            padding: 100px 20px 20px; /* Adjust padding to account for fixed header */
+            text-align: center;
+            animation: fadeInUp 1s ease;
+        }
+
+        .os-card {
+            background-color: #03A9F4;
+            border-radius: 15px;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+
+        .os-card:hover {
+            background-color: #0288D1;
+        }
+
+        .os-card h2 {
+            margin-top: 0;
+        }
+
+        .os-card-horizontal img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .os-card-vertical {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .os-card-vertical img {
+            width: 48%;
+            border-radius: 15px;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="assets/20240308_103528 (1).ico" alt="Logo" style="width: 200px; height:90px;">
+        </a>
+        <nav class="navbar">
+            <a href="index.html" style="--i:1">Home</a>
+            <a href="services.html" style="--i:3">Services</a>
+            <a href="products.html" style="--i:4">Products</a>
+            <a href="devs.html" style="--i:5">Developers/Techs</a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <div class="os-card">
+            <h2>Coming Soon</h2>
+            <div class="os-card-horizontal">
+        </div>
+        
+
+    <script>
+        // Any JavaScript specific to the Custom OS page can go here
+    </script>
+</body>
+</html>
