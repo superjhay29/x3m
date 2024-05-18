@@ -13,7 +13,6 @@
             font-family: Arial, sans-serif;
             background: #18061f url('assets/bg.jpg') no-repeat;
             background-size: cover;
-            height: 100vh;
             color: #fff;
         }
 
@@ -42,15 +41,28 @@
             padding: 50px;
             animation: slideUp 1s ease;
             text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .developer {
-            margin-bottom: 50px;
+            background-color: rgba(3, 169, 244, 0.8);
+            border-radius: 15px;
+            margin: 20px;
+            padding: 20px;
+            width: 250px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .developer:hover {
+            transform: translateY(-10px);
+            background-color: rgba(2, 136, 209, 0.8);
         }
 
         .developer img {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            height: auto;
             border-radius: 50%;
             margin-bottom: 20px;
         }
@@ -88,6 +100,13 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .developer {
+                width: 100%;
+                margin: 10px 0;
             }
         }
     </style>
