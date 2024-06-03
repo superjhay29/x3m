@@ -42,18 +42,26 @@
 
         .content {
             padding: 100px 20px 20px; /* Adjust padding to account for fixed header */
-            text-align: center;
             animation: fadeInUp 1s ease;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .os-card {
             background-color: #03A9F4;
             border-radius: 15px;
-            margin: 20px auto;
+            margin: 20px;
             padding: 20px;
-            max-width: 600px;
+            flex: 1 1 calc(50% - 40px); /* Adjust the width and margins */
             text-align: left;
             transition: background-color 0.3s;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
         }
 
         .os-card:hover {
@@ -64,20 +72,45 @@
             margin-top: 0;
         }
 
+        .os-card-horizontal {
+            flex: 0 0 40%; /* Allow image container to take 40% of the card width */
+        }
+
         .os-card-horizontal img {
             width: 100%;
+            height: auto;
+            object-fit: contain; /* Ensure images maintain their aspect ratio */
             border-radius: 15px;
         }
 
-        .os-card-vertical {
+        .os-card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .btn-container {
+            margin-top: 10px;
             display: flex;
             justify-content: space-between;
-            gap: 20px;
         }
 
-        .os-card-vertical img {
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #fff;
+            color: #03A9F4;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
             width: 48%;
-            border-radius: 15px;
+        }
+
+        .btn:hover {
+            background-color: #0288D1;
+            color: #fff;
         }
 
         @keyframes fadeInDown {
@@ -101,6 +134,27 @@
                 transform: translateY(0);
             }
         }
+
+        @media screen and (max-width: 768px) {
+            .os-card {
+                flex: 1 1 100%;
+                flex-direction: column;
+            }
+
+            .os-card-horizontal {
+                flex: none;
+                width: 100%;
+            }
+
+            .os-card-content {
+                margin-top: 20px;
+            }
+
+            .btn {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -117,11 +171,34 @@
     </header>
     
     <div class="content">
-        <div class="os-card">
-            <h2>Coming Soon</h2>
-            <div class="os-card-horizontal">
+        <div class="card-container">
+            <div class="os-card">
+                <div class="os-card-horizontal">
+                    <img src="assets/Capture.PNG" alt="X3M Service">
+                </div>
+                <div class="os-card-content">
+                    <h2>X3M Service</h2>
+                    <p>X3M Service is a robust software tool designed for technicians to perform advanced Android modifications and remote services. It offers a comprehensive suite of features that streamline the customization and optimization process for Android devices.</p>
+                    <div class="btn-container">
+                        <a href="https://www.mediafire.com/folder/hfjcov4f3q8ww/Release" class="btn">Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="os-card">
+                <div class="os-card-horizontal">
+                    <img src="assets/77f7c825-5271-4609-89b8-cc38e555d57e.jpg" alt="iShare Premium">
+                </div>
+                <div class="os-card-content">
+                    <h2>iShare Premium</h2>
+                    <p>iShare Premium is a premium software solution for sharing and managing files across multiple devices. It provides a secure and efficient way to transfer files, ensuring data integrity and high-speed performance.</p>
+                    <div class="btn-container">
+                        <a href="https://www.facebook.com/X3Mtunes" class="btn">Buy</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        
+    </div>
 
     <script>
         // Any JavaScript specific to the Custom OS page can go here
